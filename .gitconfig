@@ -1,0 +1,9 @@
+[include]
+	path = .gituser
+	path = .gitlocal
+[push]
+	default = simple
+[core]
+	excludesfile = ~/.gitignore_global
+[color]
+	ui = auto
