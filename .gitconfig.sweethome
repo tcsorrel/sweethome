@@ -1,6 +1,22 @@
 [push]
-	default = simple
+    default = simple
 [core]
-	excludesfile = ~/.gitignore_global
+    editor = vim
+    excludesfile = ~/.gitignore_global
 [color]
-	ui = auto
+    ui = auto
+[alias]
+    a = add .
+    ci = commit
+    cia = commit -a --amend
+    co = checkout
+    l = log --oneline
+    lg = log --oneline --graph --decorate
+    rb = "!f(){ git checkout master && git pull && git checkout ${1} && git rebase master; };f"
+    s = status --short --branch
+    st = status
+    sh = show
+    shst = show --stat
+    d = diff
+    dst = diff --stat
+    rev = review
