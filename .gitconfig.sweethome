@@ -1,6 +1,3 @@
-[include]
-	path = .gituser
-	path = .gitlocal
 [push]
 	default = simple
 [core]
