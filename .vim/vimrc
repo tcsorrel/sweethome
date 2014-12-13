@@ -13,11 +13,6 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
-Plugin 'Valloric/YouCompleteMe'
-" require
-" aptitude install clang-3.5 lldb-3.5 libclang-3.5-dev lldb-3.5-dev cmake
-" cd ~/.vim/bundle/YouCompleteMe
-" ./install.sh --clang-completer
 Plugin 'klen/python-mode'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
