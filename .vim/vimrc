@@ -66,8 +66,13 @@ set expandtab
 filetype on
 au BufNewFile,BufRead *.sls set filetype=yaml
 
+" python-mode
 " python-mode #342 workaround
 let g:pymode_rope_lookup_project = 0
+" make python-mode sensitive to activated virtualenv
+let g:pymode_virtualenv = 1
+" trim unused white spaces on save
+let g:pymode_trim_whitespaces = 1
 
 "load externalfiles
 "execute 'source '. $HOME . '/vim/shortkeys.vim'
