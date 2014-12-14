@@ -59,15 +59,24 @@ set number
 highlight LineNr ctermbg=blue ctermfg=gray
 set textwidth=80
 set cc=+1
+
 " let tab always be 4 spaces
 set shiftwidth=4
 set softtabstop=4
 set expandtab
+
+" wildmenu
+set wildmenu
+set wildignore=*.o,*~,*.pyc
+
+" search
+set hlsearch
+
 " Salt state file syntax highlight
 filetype on
 au BufNewFile,BufRead *.sls set filetype=yaml
 
-" python-mode
+" python-mode configuration
 " python-mode #342 workaround
 let g:pymode_rope_lookup_project = 0
 " make python-mode sensitive to activated virtualenv
