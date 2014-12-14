@@ -17,6 +17,7 @@ Plugin 'klen/python-mode'
 Plugin 'rking/ag.vim'
 " require
 " aptitude install silversearcher-ag (available since Ubuntu 14.04)
+Plugin 'kien/ctrlp.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
