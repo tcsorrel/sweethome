@@ -8,54 +8,46 @@ keys = [
     # Switch between windows in current stack pane
     Key(
         [mod], "k",
-        lazy.layout.up(),
+        lazy.layout.up(),             # stack, full screen
     ),
     Key(
         [mod], "j",
-        lazy.layout.down(),
+        lazy.layout.down(),           # stack, full screen
     ),
     Key(
         [mod], "h",
-        lazy.layout.previous(),  # stack
-        lazy.layout.left(),      # monad-tall
+        lazy.layout.previous(),       # stack
+        lazy.layout.left(),           # monad-tall
     ),
     Key(
         [mod], "l",
-        lazy.layout.next(),      # stack
-        lazy.layout.right(),     # monad-tall
+        lazy.layout.next(),           # stack
+        lazy.layout.right(),          # monad-tall
     ),
-
-    # Switch window focus to other pane(s) of stack
-    Key(
-        [mod], "space",
-        lazy.layout.next()
-    ),
-
     # Swap panes of split stack
     Key(
         [mod, "shift"], "space",
-        lazy.layout.rotate(),
-        lazy.layout.flip(),       # monad-tall
+        lazy.layout.rotate(),         # stack
+        lazy.layout.flip(),           # monad-tall
     ),
     # Move windows up or down in current stack
     Key(
         [mod, "shift"], "k",
-        lazy.layout.shuffle_up(),       # Stack, xmonad-tall
+        lazy.layout.shuffle_up(),     # stack, xmonad-tall
     ),
     Key(
         [mod, "shift"], "j",
-        lazy.layout.shuffle_down(),       # Stack, xmonad-tall
+        lazy.layout.shuffle_down(),   # stack, xmonad-tall
     ),
 
     Key(
         [mod, "control"], "k",
-        lazy.layout.grow(),             # xmonad-tall
+        lazy.layout.grow(),           # xmonad-tall
     ),
     Key(
         [mod, "control"], "j",
-        lazy.layout.shrink(),               # xmonad-tall
+        lazy.layout.shrink(),         # xmonad-tall
     ),
-    Key([mod, "control"], "r", lazy.restart()),
 
     # Toggle between split and unsplit sides of stack.
     # Split = all windows displayed
@@ -63,18 +55,21 @@ keys = [
     # multiple stack panes
     Key(
         [mod, "shift"], "Return",
-        lazy.layout.toggle_split()
+        lazy.layout.toggle_split()    # stack
     ),
+    # Shortcuts
     Key([mod], "Return", lazy.spawn("xterm")),
+    Key([mod], "b", lazy.spawn("firefox")),
+    Key([mod], "r", lazy.spawncmd()),
 
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.nextlayout()),
-    Key([mod, "control"], "w", lazy.window.kill()),
 
+    # Controls on session and clients
+    Key([mod, "control"], "w", lazy.window.kill()),
     Key([mod, "control"], "r", lazy.restart()),
     Key([mod, "control"], "q", lazy.shutdown()),
-    Key([mod], "r", lazy.spawncmd()),
-    Key([mod, "control"], "l", lazy.spawn("xscreensaver-command --lock")),
+    Key([mod, "control"], "l", lazy.spawn("slock")), # require suckless-tools
 ]
 
 groups = [Group(i) for i in "asdfuiop"]
