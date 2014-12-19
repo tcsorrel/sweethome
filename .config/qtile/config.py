@@ -60,6 +60,7 @@ keys = [
     # Shortcuts
     Key([mod], "Return", lazy.spawn("xterm")),
     Key([mod], "b", lazy.spawn("firefox")),
+    Key([mod], "n", lazy.spawn("pcmanfm")),
     Key([mod], "r", lazy.spawncmd()),
 
     # Toggle between different layouts as defined below
