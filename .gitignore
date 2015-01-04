@@ -1,15 +1,1 @@
-# English and french Linux distribution home
-.*
-Desktop
-Bureau
-Pictures
-Images
-Documents
-Download
-Téléchargements
-VirtualBox\ VMs
-
-# Some habits
-dev
-envs
-try
+vim/bundle/*

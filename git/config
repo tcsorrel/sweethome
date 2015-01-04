@@ -2,7 +2,7 @@
     default = simple
 [core]
     editor = vim
-    excludesfile = ~/.gitignore_global
+    excludesfile = ~/sweethome/git/global_ignore
 [color]
     ui = auto
 [alias]
