@@ -55,6 +55,7 @@ set t_Co=256
 syntax on
 set number
 highlight LineNr ctermbg=blue ctermfg=gray
+highlight Search ctermfg=DarkBlue
 set textwidth=80
 set cc=+1
 
