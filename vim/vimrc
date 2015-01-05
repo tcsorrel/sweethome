@@ -86,3 +86,4 @@ let g:pymode_trim_whitespaces = 1
 "load externalfiles
 "execute 'source '. $HOME . '/vim/shortkeys.vim'
 map <F2> <Esc>:NERDTreeToggle<CR>
+map <F3> <Esc>:CtrlP<CR>
