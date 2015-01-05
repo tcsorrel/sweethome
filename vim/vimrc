@@ -55,7 +55,6 @@ set t_Co=256
 syntax on
 set number
 highlight LineNr ctermbg=blue ctermfg=gray
-highlight Search ctermfg=DarkBlue
 set textwidth=80
 set cc=+1
 
@@ -82,6 +81,14 @@ let g:pymode_rope_lookup_project = 0
 let g:pymode_virtualenv = 1
 " trim unused white spaces on save
 let g:pymode_trim_whitespaces = 1
+" make lint message always readable
+highlight Search ctermfg=DarkBlue
+
+" NerdTree
+" Force encoding for NerdTree directorie arrows
+set encoding=utf-8
+" else directory arrows can be written in ascii
+" let g:NERDTreeDirArrows=0
 
 "load externalfiles
 "execute 'source '. $HOME . '/vim/shortkeys.vim'
