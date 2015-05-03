@@ -12,6 +12,10 @@ Each part of sweethome may be integrated seperatly, depending on what is needed
 ```
 ln -s ~/sweethome/vim/vimrc ~/.vimrc
 ```
+Vim plugins are installed with [Vundle](https://github.com/gmarik/Vundle.vim).
+```
+vim +PluginInstall +qa
+```
 ### Git
 * Include the gitconfig file in your `~/.gitconfig`:
 ```
