@@ -90,6 +90,9 @@ set encoding=utf-8
 " else directory arrows can be written in ascii
 " let g:NERDTreeDirArrows=0
 
+" fix refresh issue on latest vim version with xterm
+set ambiwidth=double
+
 "load externalfiles
 "execute 'source '. $HOME . '/vim/shortkeys.vim'
 map <F2> <Esc>:NERDTreeToggle<CR>
