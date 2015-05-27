@@ -1,3 +1,18 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Prerequisites:
+;  * `emacs >= 24.4`, or `emacs < 24.4` with `package.el`
+;
+; Installed modes:
+; * auctex,
+; * jedi,
+; * magit,
+; * markdown,
+; * org-mode,
+; * rainbow-mode,
+; * solarized-dark,
+; * web-mode,
+; * yaml.
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (setq user-full-name "Sarah Connor")
 (setq user-mail-address "<sarah@connor.org>")
 (setq mail-self-address "Sarah Connor <sarah@connor.org>")
