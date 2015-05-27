@@ -13,9 +13,11 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 " requires flake8 and pylint to be installed
+Plugin 'davidhalter/jedi-vim'
+" requires jedi to be installed or fecthed in submodule
 Plugin 'klen/python-mode'
 Plugin 'rking/ag.vim'
-" require
+" requires
 " aptitude install silversearcher-ag (available since Ubuntu 14.04)
 Plugin 'kien/ctrlp.vim'
 " The following are examples of different formats supported.
@@ -95,6 +97,9 @@ let g:pymode_virtualenv = 1
 let g:pymode_trim_whitespaces = 1
 " let syntastic do static ckecks
 let g:pymode_lint = 0
+" let jedi-vim do auto completion and show documentation
+let g:pymode_rope_completion = 0
+let g:pymode_doc = 0
 
 " make lint message always readable
 highlight Search ctermfg=DarkBlue
