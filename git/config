@@ -11,21 +11,28 @@
 [alias]
     a = add .
     br = branch
+    bv = branch -vv
     ca = commit -a --amend
     ci = commit
     cia = commit -a --amend
     cs = commit -a -s
     co = checkout
+    com = checkout master
+    d = diff
+    dst = diff --stat
     l = log --oneline
     lg = log --oneline --graph --decorate
     lh = log --graph --pretty=format:'%C(yellow)%H%Creset %Cgreen%cd%Creset %C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset' --date=iso --color
     ll = log --stat --pretty=format:'%C(yellow)%h %Cgreen%cr%Creset%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset'
     lo = log --graph --pretty=format:'%C(yellow)%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset%C(bold blue)<%an>%Creset' --color
+    p = pull
     rb = "!f(){ git checkout master && git pull && git checkout ${1} && git rebase master; };f"
+    rev = review
+    ri = rebase -i
+    rim = rebase -i master
+    rt = remote
+    rv = remote -v
     s = status --short --branch
     st = status
     sh = show
     shst = show --stat
-    d = diff
-    dst = diff --stat
-    rev = review
