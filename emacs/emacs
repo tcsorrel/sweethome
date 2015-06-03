@@ -1,23 +1,24 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Prerequisites:
-;  * `emacs >= 24.4`, or `emacs < 24.4` with `package.el`
-;
-; Installed modes:
-; * auctex,
-; * jedi,
-; * magit,
-; * markdown,
-; * org-mode,
-; * rainbow-mode,
-; * solarized-dark,
-; * web-mode,
-; * yaml.
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;------------------------
+;; This configuration requires either:
+;;  - emacs >= 24.4,
+;;  - emacs < 24.4 with package.el.
+;;
+;; Installed packages:
+;;  - auctex,
+;;  - jedi,
+;;  - magit,
+;;  - markdown,
+;;  - org-mode,
+;;  - rainbow-mode,
+;;  - solarized-dark,
+;;  - web-mode,
+;;  - yaml.
+;;;------------------------
 (setq user-full-name "Sarah Connor")
 (setq user-mail-address "<sarah@connor.org>")
 (setq mail-self-address "Sarah Connor <sarah@connor.org>")
 
-;;; emacs-snapshot PPA hack
+;;; Ubuntu emacs-lisp PPA: ppa:ubuntu-elisp/ppa
 ;;(when (>= emacs-major-version 25)
 ;;  (defconst debian-emacs-flavor 'emacs25))
 
@@ -38,9 +39,9 @@
 ;;; Local packages
 (add-to-list 'load-path "~/.emacs.d/elisp")
 
-;;------------------------
-;;; Buffer Appearance
-;;------------------------
+;;;------------------------
+;; Buffer Appearance
+;;;------------------------
 (setq inhibit-startup-message t)
 (defalias 'yes-or-no-p 'y-or-n-p)
 
@@ -87,9 +88,9 @@
 ;;; Rainbow: display colors after their code
 (use-package rainbow-mode :ensure t)
 
-;;------------------------
-;;; Theming
-;;------------------------
+;;;------------------------
+;; Theming
+;;;------------------------
 (custom-set-faces
  '(default ((t (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 98 :width normal :foundry "unknown" :family "DejaVu Sans Mono")))))
 
@@ -98,9 +99,9 @@
   :init
   (load-theme 'solarized-dark))
 
-;;------------------------
-;;; Encoding Selection
-;;------------------------
+;;;------------------------
+;; Encoding Selection
+;;;------------------------
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
 (set-language-environment 'utf-8)
