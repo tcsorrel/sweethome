@@ -1,6 +1,6 @@
 from libqtile.config import Key, Screen, Group, Drag, Click
 from libqtile.command import lazy
-from libqtile import layout, bar, widget
+from libqtile import layout, bar, widget, hook
 
 mod = "mod4"
 
@@ -142,3 +142,12 @@ cursor_warp = False
 floating_layout = layout.Floating()
 auto_fullscreen = True
 wmname = "qtile"
+
+@hook.subscribe.client_new
+def dialogs(window):
+    if(window.window.get_wm_type() == 'dialog'
+       or window.window.get_wm_transient_for()
+       or window.window.get_wm_window_role() == 'conversation'
+    ):
+        window.floating = True
+
