@@ -15,7 +15,6 @@ Plugin 'scrooloose/syntastic'
 " requires flake8 and pylint to be installed
 Plugin 'davidhalter/jedi-vim'
 " requires jedi to be installed or fecthed in submodule
-Plugin 'klen/python-mode'
 Plugin 'rking/ag.vim'
 " requires
 " aptitude install silversearcher-ag (available since Ubuntu 14.04)
@@ -87,19 +86,6 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
-
-" python-mode configuration
-" python-mode #342 workaround
-let g:pymode_rope_lookup_project = 0
-" make python-mode sensitive to activated virtualenv
-let g:pymode_virtualenv = 1
-" trim unused white spaces on save
-let g:pymode_trim_whitespaces = 1
-" let syntastic do static ckecks
-let g:pymode_lint = 0
-" let jedi-vim do auto completion and show documentation
-let g:pymode_rope_completion = 0
-let g:pymode_doc = 0
 
 " make lint message always readable
 highlight Search ctermfg=DarkBlue
