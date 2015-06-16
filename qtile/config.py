@@ -1,3 +1,6 @@
+import os
+import subprocess
+
 from libqtile.config import Key, Screen, Group, Drag, Click
 from libqtile.command import lazy
 from libqtile import layout, bar, widget, hook
@@ -151,3 +154,8 @@ def dialogs(window):
     ):
         window.floating = True
 
+@hook.subscribe.startup
+def startup():
+    subprocess.Popen([
+        "feh", "--bg-scale", os.path.expanduser("~/.sweetwallpaper")
+    ])
