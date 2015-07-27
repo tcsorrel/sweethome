@@ -1,33 +1,33 @@
+#include "sweethome/x/solarized/Xresources.dark"
 ! xrdb -merge ~/.Xresources
 xterm*faceName: Monospace
 xterm*faceSize: 10
 
-! terminal colors ----------------------------------
-! tangoesque scheme
-xterm*background: #111111
-! xterm*background: #204a87
-xterm*foreground: #babdb6
-! Black (not tango) + DarkGrey
-xterm*color0:  #000000
-xterm*color8:  #555753
-! DarkRed + Red
-xterm*color1:  #ff6565
-xterm*color9:  #ff8d8d
-! DarkGreen + Green
-xterm*color2:  #93d44f
-xterm*color10: #c8e7a8
-! DarkYellow + Yellow
-xterm*color3:  #eab93d
-xterm*color11: #ffc123
-! DarkBlue + Blue
-xterm*color4:  #204a87
-xterm*color12: #3465a4
-! DarkMagenta + Magenta
-xterm*color5:  #ce5c00
-xterm*color13: #f57900
-!DarkCyan + Cyan (both not tango)
-xterm*color6:  #89b6e2
-xterm*color14: #46a4ff
-! LightGrey + White
-xterm*color7:  #cccccc
-xterm*color15: #ffffff
+! -- xterm colors --
+! force applying solarized on xterm
+xterm*background:            S_base03
+xterm*foreground:            S_base0
+!! black dark/light
+xterm*color0:                S_base02
+xterm*color8:                S_base03
+!! red dark/light
+xterm*color1:                S_red
+xterm*color9:                S_orange
+!! green dark/light
+xterm*color2:                S_green
+xterm*color10:               S_base01
+!! yellow dark/light
+xterm*color3:                S_yellow
+xterm*color11:               S_base00
+!! blue dark/light
+xterm*color4:                S_blue
+xterm*color12:               S_base0
+!! magenta dark/light
+xterm*color5:                S_magenta
+xterm*color13:               S_violet
+!! cyan dark/light
+xterm*color6:                S_cyan
+xterm*color14:               S_base1
+!! white dark/light
+xterm*color7:                S_base2
+xterm*color15:               S_base3
