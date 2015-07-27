@@ -59,6 +59,9 @@ set expandtab
 set wildmenu
 set wildignore=*.o,*~,*.pyc
 
+" check spelling (requiring aspell, hunspell or ispell to be installed)
+set spell
+
 " search
 set hlsearch
 
