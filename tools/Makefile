@@ -19,7 +19,7 @@ distclean:
 	@git clean -xdf
 
 # syntax checking
-lint: pylint pep8
+lint: pylint pep8 isort
 
 pep8: clean
 	@echo "=== PEP8 ==="
@@ -28,6 +28,10 @@ pep8: clean
 pylint: clean
 	@echo "=== Pylint ==="
 	@$(PYLINT) $(PYLINTFLAGS) $(PYTHONFILES) || exit 0
+
+isort: clean
+	@printf "\n=== isort ===\n"
+	@isort $(PYTHONFILES) --check-only
 
 # unitary tests, code coverage
 basic_coverage: clean
