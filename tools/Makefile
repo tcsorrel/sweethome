@@ -3,35 +3,33 @@
 # replace <source_package> with your application's package name
 PACKAGE=<source_package>
 
-PEP8 = pep8
-PEP8FLAGS = --count --statistics --max-line-length=80
-PYLINT = pylint
-PYLINTFLAGS = -rn --disable=locally-disabled
+NPROC := $(shell nproc)
 PYTHONFILES := $(shell find . -name '*.py')
 
 all: lint coverage
 
 # repository cleanup
 clean:
+	@rm -rf build dist
 	@find . -name "*.pyc" -delete
 
 distclean:
 	@git clean -xdf
 
 # syntax checking
-lint: pylint pep8 isort
+lint: isort pep8 pep257 pylint
 
-pep8: clean
-	@echo "=== PEP8 ==="
-	@$(PEP8) $(PEP8FLAGS) $(PYTHONFILES) || exit 0
+isort: clean
+	@echo "=== isort ==="
+	@isort $(PYTHONFILES) --check-only || true
+
+pep%: clean
+	@echo "=== PEP$* ==="
+	@pep$* $(PYTHONFILES) || true
 
 pylint: clean
 	@echo "=== Pylint ==="
-	@$(PYLINT) $(PYLINTFLAGS) $(PYTHONFILES) || exit 0
-
-isort: clean
-	@printf "\n=== isort ===\n"
-	@isort $(PYTHONFILES) --check-only
+	@pylint -j $(NPROC) $(PYTHONFILES) || true
 
 # unitary tests, code coverage
 basic_coverage: clean
