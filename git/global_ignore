@@ -21,6 +21,7 @@
 *~
 *.sw?
 *.orig
+spell
 
 # Packages #
 ############
