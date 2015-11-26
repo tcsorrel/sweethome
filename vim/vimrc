@@ -96,3 +96,6 @@ set ambiwidth=single
 "execute 'source '. $HOME . '/vim/shortkeys.vim'
 map <F2> <Esc>:NERDTreeToggle<CR>
 map <F3> <Esc>:CtrlP<CR>
+"Toggle for mouse copy/paste
+map <F10> <Esc>:set nu textwidth=80 cc=1 nopaste<CR>
+map <F12> <Esc>:set nonu textwidth=0 cc=0 paste<CR>
