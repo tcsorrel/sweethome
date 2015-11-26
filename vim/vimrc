@@ -21,6 +21,7 @@ Plugin 'rking/ag.vim'
 " aptitude install silversearcher-ag (available since Ubuntu 14.04)
 Plugin 'kien/ctrlp.vim'
 Plugin 'mattn/emmet-vim'
+Plugin 'hynek/vim-python-pep8-indent'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -86,7 +87,7 @@ let g:syntastic_auto_jump=1
 " Force encoding for NerdTree directorie arrows
 set encoding=utf-8
 " else directory arrows can be written in ascii
-let g:NERDTreeDirArrows=0
+" let g:NERDTreeDirArrows=0
 
 " fix refresh issue on latest vim version with xterm
 set ambiwidth=single
