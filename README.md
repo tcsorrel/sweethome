@@ -20,9 +20,17 @@ $ vim +PluginInstall +qa
 ```
 
 ### Emacs
-* Use sweethome's .emacs:
-```bash
-$ ln -s ~/sweethome/emacs/emacs ~/.emacs
+* Include sweethome's configuration from your `~/.emacs`:
+```lisp
+(setq user-full-name "Sarah Connor")
+(setq user-mail-address "<sarah@connor.org>")
+(setq mail-self-address "Sarah Connor <sarah@connor.org>")
+
+;; Ubuntu PPA hacks
+;;(load-file ""~/sweethome/emacs/snapshot-ppa.el"")
+
+;; main configuration
+(load-file "~/sweethome/emacs/emacs.el")
 ```
 Mode packaging requires `emacs 24.4+` or `package.el`.
 
