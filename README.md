@@ -46,6 +46,17 @@ Mode packaging requires `emacs 24.4+` or `package.el`.
 ```
 The .gitconfig `[include]` syntax requires `git 1.7.10+`.
 
+### Mercurial
+* Include configuration files in your `~/.hgrc`:
+```ini
+[ui]
+username = Your Name <your.name@email.example>
+ignore = ~/sweethome/hg/ignore
+
+%include ~/sweethome/hg/main
+
+```
+
 ### X resources
 * Use sweethome's Xresources file to configure Xterm font and colors:
 ```bash
