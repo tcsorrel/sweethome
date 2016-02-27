@@ -4,7 +4,7 @@ Configuration files for Python coding with Vim, Emacs, Xterm, Git and Qtile
 ## Installation
 * Clone the repository into your home directory:
 ```bash
-git clone --recursive https://github.com/tcsorrel/sweethome.git ~/sweethome
+$ git clone --recursive https://github.com/tcsorrel/sweethome.git ~/sweethome
 ```
 
 ## Integration
@@ -34,9 +34,15 @@ $ vim +PluginInstall +qa
 ```
 Mode packaging requires `emacs 24.4+` or `package.el`.
 
+### Shell
+* Load sweethome's shell functions in your `~/.bashrc` or `~/.bash_aliases`.
+```bash
+source ~/sweethome/sh/func.sh
+```
+
 ### Git
 * Include the gitconfig file in your `~/.gitconfig`:
-```INI
+```ini
 [user]
     name = Your Name
     email = your.name@email.example
