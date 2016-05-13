@@ -27,7 +27,8 @@
     ll = log --stat --pretty=format:'%C(yellow)%h %Cgreen%cr%Creset%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset'
     lo = log --graph --pretty=format:'%C(yellow)%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset%C(bold blue)<%an>%Creset' --color
     p = pull
-    rb = "!f(){ git checkout master && git pull && git checkout ${1} && git rebase master; };f"
+    pm = "!f(){ git checkout master && git pull; };f"
+    crm = "!f(){ git checkout ${1} && git rebase ${2} master; };f"
     rev = review
     ri = rebase -i
     rim = rebase -i master
