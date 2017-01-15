@@ -63,11 +63,12 @@ keys = [
     # Shortcuts
     Key([mod], "Return", lazy.spawn("xterm")),
     Key([mod], "b", lazy.spawn("firefox")),
+    Key([mod], "c", lazy.spawn("chromium-browser")),
     Key([mod], "n", lazy.spawn("pcmanfm")),
     Key([mod], "r", lazy.spawncmd()),
 
     # Toggle between different layouts as defined below
-    Key([mod], "Tab", lazy.nextlayout()),
+    Key([mod], "Tab", lazy.next_layout()),
 
     # Controls on session and clients
     Key([mod, "control"], "w", lazy.window.kill()),
