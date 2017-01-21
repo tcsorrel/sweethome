@@ -1,5 +1,5 @@
 # SweetHome
-Configuration files for Python coding with Vim, Emacs, Xterm, Git and Qtile
+Configuration files for Python coding with Vim, Xterm, Git and Qtile
 
 ## Installation
 * Clone the repository into your home directory:
@@ -18,21 +18,6 @@ depending on what is needed.
 $ ln -s ~/sweethome/vim/vimrc ~/.vimrc
 $ vim +PluginInstall +qa
 ```
-
-### Emacs
-* Include sweethome's configuration from your `~/.emacs`:
-```lisp
-(setq user-full-name "Sarah Connor")
-(setq user-mail-address "<sarah@connor.org>")
-(setq mail-self-address "Sarah Connor <sarah@connor.org>")
-
-;; Ubuntu PPA hacks
-;;(load-file ""~/sweethome/emacs/snapshot-ppa.el"")
-
-;; main configuration
-(load-file "~/sweethome/emacs/emacs.el")
-```
-Mode packaging requires `emacs 24.4+` or `package.el`.
 
 ### Shell
 * Load sweethome's shell functions in your `~/.bashrc` or `~/.bash_aliases`.
