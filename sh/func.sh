@@ -12,3 +12,9 @@ in-venv(){
         $*
     )
 }
+
+# workon is the same command as virtualenv-wrapper but much simplier
+# in production context it is convenient this function available
+workon(){
+    . ${WORKON_HOME:-${HOME}/.virtualenvs}/${1}/bin/activate
+}
