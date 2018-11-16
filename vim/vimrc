@@ -9,7 +9,8 @@ call vundle#begin('~/sweethome/vim/bundle')
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
@@ -39,10 +40,12 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 " Airline setup
-set laststatus=2
-set t_Co=256
+let g:airline_theme='base16_solarized'
 
-" solarized 
+" set laststatus=2
+" set t_Co=256
+
+" solarized
 syntax on
 set background=dark
 colorscheme solarized
