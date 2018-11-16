@@ -1,7 +1,7 @@
 [push]
     default = simple
 [core]
-    editor = vim
+    editor = nvim
     excludesfile = ~/sweethome/git/global_ignore
 [color]
     branch = auto
