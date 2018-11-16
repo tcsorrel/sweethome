@@ -9,6 +9,8 @@ if dein#load_state('~/.cache/dein')
 
   call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
   call dein#add('Shougo/deoplete.nvim')
+  "requires 'pip3 install --user pynvim
+  call dein#add('zchee/deoplete-jedi')
 
   call dein#add('icymind/NeoSolarized')
   call dein#add('vim-airline/vim-airline')
@@ -16,8 +18,6 @@ if dein#load_state('~/.cache/dein')
   call dein#add('tpope/vim-fugitive')
   call dein#add('scrooloose/nerdtree')
   call dein#add('w0rp/ale')
-"   call dein#add('davidhalter/jedi-vim')
-" requires jedi to be installed or fecthed in submodule
   call dein#add('rking/ag.vim')
 " requires
 " aptitude install silversearcher-ag (available since Ubuntu 14.04)
@@ -40,6 +40,9 @@ syntax enable
 
 " Airline setup
 let g:airline_theme='base16_solarized'
+
+" Deoplete setup
+let g:deoplete#enable_at_startup = 1
 
 " solarized 
 syntax on
@@ -66,6 +69,9 @@ set wildignore=*.o,*~,*.pyc
 
 " search
 set hlsearch
+
+" use mouse in all contexts
+set mouse=a
 
 " Salt state file syntax highlight
 filetype on
