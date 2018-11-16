@@ -15,7 +15,10 @@
     ca = commit -a --amend
     ci = commit
     cia = commit -a --amend
-    cs = commit -a -s
+    cs = commit -s
+    csm = commit -s -m
+    cas = commit -a -s
+    casm = commit -a -s -m
     co = checkout
     com = checkout master
     d = diff
