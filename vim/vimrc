@@ -69,6 +69,8 @@ set spell
 
 " search
 set hlsearch
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
 
 " Salt state file syntax highlight
 filetype on
