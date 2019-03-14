@@ -18,7 +18,16 @@ depending on what is needed.
 $ ln -s ~/sweethome/vim/vimrc ~/.vimrc
 $ vim +PluginInstall +qa
 ```
+### neovim
 
+```bash
+python3 -m venv ~/.config/nvim/python3
+. ~/.config/nvim/python3/bin/activate
+pip install -r ~/sweethome/vim/requirements.pip
+virtualenv ~/.config/nvim/python2 -p python2
+. ~/.config/nvim/python2/bin/activate
+pip install -r ~/sweethome/vim/requirements.pip
+```
 ### Shell
 * Load sweethome's shell functions in your `~/.bashrc` or `~/.bash_aliases`.
 ```bash

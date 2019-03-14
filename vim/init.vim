@@ -42,6 +42,8 @@ syntax enable
 let g:airline_theme='base16_solarized'
 
 " Deoplete setup
+let g:python_host_prog = expand('~/.config/nvim/python2/bin/python')
+let g:python3_host_prog = expand('~/.config/nvim/python3/bin/python')
 let g:deoplete#enable_at_startup = 1
 
 " solarized 
@@ -70,13 +72,13 @@ set wildignore=*.o,*~,*.pyc
 " search
 set hlsearch
 
-" use mouse in all contexts
-set mouse=a
+set mouse=""
 
 " Salt state file syntax highlight
 filetype on
 au BufNewFile,BufRead *.sls set filetype=yaml
 
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 " NerdTree
 " Force encoding for NerdTree directorie arrows
