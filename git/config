@@ -3,6 +3,7 @@
 [core]
     editor = nvim
     excludesfile = ~/sweethome/git/global_ignore
+    pager = less -F -X
 [color]
     branch = auto
     diff = auto
@@ -25,13 +26,17 @@
     dst = diff --stat
     l = log --oneline
     lg = log --oneline --graph --decorate
-    lga = log --oneline --graph --decorate --all -20
+    lga = log --oneline --graph --decorate --all
+    lgas = log --oneline --graph --decorate --all -20
     lh = log --graph --pretty=format:'%C(yellow)%H%Creset %Cgreen%cd%Creset %C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset' --date=iso --color
     ll = log --stat --pretty=format:'%C(yellow)%h %Cgreen%cr%Creset%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset'
     lo = log --graph --pretty=format:'%C(yellow)%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset%C(bold blue)<%an>%Creset' --color
     p = pull
     pm = "!f(){ git checkout master && git pull; };f"
     crm = "!f(){ git checkout ${1} && git rebase ${2} master; };f"
+    crom = "!f(){ git fetch && git checkout ${1} && git rebase ${2} origin/master; };f"
+    crmp = "!f(){ git checkout ${1} && git rebase ${2} master && git push -f; };f"
+    cromp = "!f(){ git fetch && git checkout ${1} && git rebase ${2} origin/master && git push -f; };f"
     rev = review
     ri = rebase -i
     rim = rebase -i master
