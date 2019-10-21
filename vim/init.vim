@@ -8,17 +8,14 @@ if dein#load_state('~/.cache/dein')
   call dein#begin('~/.cache/dein')
 
   call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
-  call dein#add('Shougo/deoplete.nvim')
-  "requires 'pip3 install --user pynvim
-  call dein#add('zchee/deoplete-jedi')
 
   call dein#add('icymind/NeoSolarized')
   call dein#add('vim-airline/vim-airline')
   call dein#add('vim-airline/vim-airline-themes')
   call dein#add('tpope/vim-fugitive')
   call dein#add('scrooloose/nerdtree')
-  call dein#add('w0rp/ale')
-  call dein#add('autozimu/LanguageClient-neovim', {'rev': 'next', 'build': './install.sh'})
+  " require 'pip install python-language-server'
+  call dein#add('dense-analysis/ale')
   call dein#add('rking/ag.vim')
   call dein#add('jremmen/vim-ripgrep')
 " requires
@@ -42,19 +39,19 @@ endif
 filetype plugin indent on
 syntax enable
 
-" lsp
-let g:LanguageClient_autoStart = 1
-let g:LanguageClient_serverCommands = {
- \ 'python': ['pyls']
- \ }
+" If you want to install not installed plugins on startup.
+if dein#check_install()
+  call dein#install()
+endif
 
 " Airline setup
 let g:airline_theme='base16_solarized'
 
-" Deoplete setup
-let g:python_host_prog = expand('~/.config/nvim/python2/bin/python')
-let g:python3_host_prog = expand('~/.config/nvim/python3/bin/python')
-let g:deoplete#enable_at_startup = 1
+" ALE setup
+let g:ale_completion_enabled = 1
+let g:ale_linters = {'python': ['pyls', 'flake8', 'pylint']}
+let g:ale_fixers = {'python': ['black', 'isort']}
+let g:ale_fix_on_save = 1
 
 " solarized 
 syntax on
