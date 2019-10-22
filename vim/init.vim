@@ -14,7 +14,6 @@ if dein#load_state('~/.cache/dein')
   call dein#add('vim-airline/vim-airline-themes')
   call dein#add('tpope/vim-fugitive')
   call dein#add('scrooloose/nerdtree')
-  " require 'pip install python-language-server'
   call dein#add('dense-analysis/ale')
   call dein#add('rking/ag.vim')
   call dein#add('jremmen/vim-ripgrep')
@@ -23,9 +22,6 @@ if dein#load_state('~/.cache/dein')
   call dein#add('kien/ctrlp.vim')
   call dein#add('mattn/emmet-vim')
   call dein#add('hynek/vim-python-pep8-indent')
-" Python code quality
-  call dein#add('python/black')
-  call dein#add('fisadev/vim-isort')
 
   if !has('nvim')
     call dein#add('roxma/nvim-yarp')
@@ -49,7 +45,9 @@ let g:airline_theme='base16_solarized'
 
 " ALE setup
 let g:ale_completion_enabled = 1
+" requires 'pip install python-language-server flake8 pylint'
 let g:ale_linters = {'python': ['pyls', 'flake8', 'pylint']}
+" requires 'pip install black isort'
 let g:ale_fixers = {'python': ['black', 'isort']}
 let g:ale_fix_on_save = 1
 
