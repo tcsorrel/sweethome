@@ -11,19 +11,14 @@ $ git clone --recursive https://github.com/tcsorrel/sweethome.git ~/sweethome
 Each part of sweethome may be integrated seperately,
 depending on what is needed.
 
-### VIM
-* Use sweethome's vimrc and install plugins with
-[Vundle](https://github.com/gmarik/Vundle.vim):
+### NeoVIM
 ```bash
-$ ln -s ~/sweethome/vim/vimrc ~/.vimrc
-$ vim +PluginInstall +qa
+$ curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
+$ sh ./installer.sh ~/.cache/dein
+$ ln -s ~/sweethome/vim/init.vim ~/.config/nvim/init.vim
+$ vi "+call dein#install()" +qa
 ```
-### neovim
 
-```bash
-curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
-sh ./installer.sh ~/.cache/dein
-```
 ### Shell
 * Load sweethome's shell functions in your `~/.bashrc` or `~/.bash_aliases`.
 ```bash
@@ -55,6 +50,7 @@ ignore = ~/sweethome/hg/ignore
 
 ### X resources
 * Use sweethome's Xresources file to configure Xterm font and colors:
+GCC Precompiler need to be installed here
 ```bash
 $ ln -s ~/sweethome/x/resources ~/.Xresources
 $ xrdb -merge ~/.Xresources
